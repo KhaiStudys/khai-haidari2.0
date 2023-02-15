@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --background: #30353E;
+    --background-light: #434C5E;
+    --text: #D8DEE9;
+    --light-text: #ECEFF4;
+
+    --border: #4C566A;
+
+    --container-width: 800px;
+
+    --card-background: #3B4252;
+    --card-width: 340px;
+}
+
+* {
+    margin: 0;
+}
+
+html {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: var(--light-text);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 6rem auto;
+}
+
+nav {
+    padding: 1rem 0;
+    position: sticky;
+    top: 0rem;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border);
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+p {
+    margin: 1rem auto;
+}
+
+h3 {
+    margin: 1rem auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.ml {
+    margin-left: auto;
+}
+
+.card {
+    padding: 1.5rem;
+    border-radius: 4px;
+    max-width: var(--card-width);
+    min-width: 200px;
+    background-color: var(--card-background);
+}
+
+.card > a > p {
+    margin: 0;
+}
+
+.card:hover {
+    transition: 300ms;
+    background-color: var(--background-light);
+}
+
+.card > a:hover {
+    color: var(--text);
+    text-decoration: none;
+    text-underline-offset: 0;
+}
+

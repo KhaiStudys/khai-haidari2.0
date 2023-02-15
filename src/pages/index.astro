@@ -1,15 +1,49 @@
 ---
+import './main.css'
+
+import Card from '../lib/Card.astro';
+
+const projects = [
+	{ 
+		title: "How I Created My Personal Website", 
+		desc: "An insight on how the website you are on right now, was built.",
+		link: '/'
+	}
+]
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Khai Haidari</title>
+		<meta name="description" content="My personal website. Get in touch through the contact section!">
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<nav class="flex">
+			<a href="/"><b>Khai Haidari</b></a>
+			<a class="ml" href="">Resume</a>
+			<a href="">GitHub</a>
+			<a href="">LinkedIn</a>
+			<a href="">Contact</a>
+		</nav>
+		<main class="container">
+			<p>Hey there!</p>
+			<p>I am a passionate high-school student with a love for technology and web development. I am constantly striving to turn my ideas into projects and use my skills to make a difference in the world. My drive to learn and create never stops.</p>
+			<p>If you are interested in working with me, check out the &apos;contact&apos; section.</p>
+			<p>Thanks for visiting!</p>
+		</main>
+		<section class="container">
+			<h3>Portfolio</h3>
+			<div class="flex">
+				{ projects.map(project => {
+					return (
+						<Card title={project.title} desc={project.desc} link={project.link}/>
+					)
+				})}
+			</div>
+		</section>
 	</body>
 </html>
